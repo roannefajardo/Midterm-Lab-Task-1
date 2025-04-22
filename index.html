@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roanne's EDM Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #8a2be2);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 12px #ff69b4;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+      color: #ffb6c1;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #ffccff;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ffb6c1;
+      margin: 20px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #ffccff;
+      text-align: center;
+      text-shadow: 0 0 5px #ff99ff;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px #ff1493;
+    }
+
+    .card p, .card a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ffe6f0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 0.4rem 0;
+      color: #ffb6c1;
+      text-decoration: none;
+      border-bottom: 1px dashed #fff;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ffb6c1;
+      box-shadow: 0 -4px 12px #da70d6;
+    }
+
+    /* Glitter animation */
+    .glitter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://i.pinimg.com/originals/0f/38/17/0f3817da1af829075774018b36ebb587.gif');
+      background-repeat: repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+
+    /* Ensuring images autofit */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glitter"></div>
+
+  <!-- Floating Hearts -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDuration = `${5 + Math.random() * 10}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <header>
+    <h1>🌸 Midterm Lab Task 1- Data Cleaning and Preparation using Excel 🌸</h1>
+    <p>🌷Shining through code and creativity🌷 </p>
+  </header>
+
+  <section>
+    <h2>Portfolio Overview</h2>
+    <div class="card">
+      <p>For this task, we are given raw and uncleaned data from Excel, and we are tasked with performing data cleaning and preparation.</p>
+    </div>
+
+    <h2>Step by Step Process</h2>
+    <div class="card">
+      <h2>STEP 1 Data Cleaning process</h2>
+      <ul>
+        <li>Load the raw file</li>
+        <li>Fit Column and row width and height</li>
+        <li>TRIM extra spaces</li>
+        <li>Remove NULL values</li>
+        <li>Remove Duplicates</li>
+      </ul>
+
+      <h2>STEP 2 Normalization</h2>
+      <ul>
+        <li>Performed 1NF</li>
+        <li>Perform Table split using 2NF</li>
+        <li>Mapped the Normalized table as a Physical Data Model</li>
+      </ul>
+
+      <h2>STEP 3 Here's the screenshot of my output before I started data cleaning (See Screenshot)</h2>
+      <img src="https://github.com/user-attachments/assets/e0375d56-cc93-4908-9492-90f4aa3642d7" alt="raw">
+
+      <h2>STEP 4 Here's the screenshot of my output after I started data cleaning (See Screenshot)</h2>
+      <img src="https://github.com/user-attachments/assets/7964220f-eaed-4296-99a2-ca1a5ed2131a" alt="cleaned">
+
+      <h2>Here's the screenshot of my ERD model (See Screenshot)</h2>
+      <img src="https://github.com/user-attachments/assets/93f70501-ae8e-4852-b153-d21de38a61c1" alt="ERD Model">
+    </div>
+  </section>
+
+  <footer>
+    🌷 © Roanne Fajardo | BSIS I102 | 2025 🌷
+  </footer>
+
+</body>
+</html>
